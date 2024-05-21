@@ -4,6 +4,24 @@
 /* https://github.com/faderzz/soundcloud-dark */
 /* https://github.com/faderzz/soundcloud-dark */
 /* https://github.com/faderzz/soundcloud-dark */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 a {
     color: white;
@@ -148,7 +166,17 @@ a:hover {
     border-bottom: 1px solid hsl(var(--border));
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .sc-classic .mixedSelectionModule {
+    animation: 1s ease-out 0s 1 fadeIn;
     background-color: #09090b;
     border-radius: 12px;
     border: 1px solid hsl(var(--border));
@@ -156,7 +184,19 @@ a:hover {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .sidebarModule {
+    animation: 1s ease-out 0s 1 fadeIn;
     background-color: #09090b;
     border-radius: 12px;
     border: 1px solid hsl(var(--border));
@@ -183,6 +223,7 @@ a:hover {
 
 /* player */
 .playControls {
+    animation: 1s ease-out 0s 1 slideInFromBottom;
     bottom: 10px;
     padding: 0;
 }
@@ -210,15 +251,22 @@ a:hover {
     margin-left: 35vh;
 }
 
-/* .sc-classic .playControl.playing {
-    box-shadow: 0px 0px 0px 0px transparent;
-    transition: box-shadow 0.3s ease-in-out;
+.sc-classic .playControls__control,
+.sc-classic .playControls__control:not(:first-child) {
+    margin-left: 12px;
+    filter: invert(0)
 }
 
-.sc-classic .playControl.playing:hover {
-    text-shadow:0px 0px 7px white;
+.sc-classic .playControls__control:hover,
+.sc-classic .volume__button:hover {
+    transition: filter 0.1s ease-in-out;
+    filter: invert(1)
 }
- */
+
+.volume .expanded .hover button {
+    filter: invert()
+}
+
 @media only screen and (max-width: 1400px) {
     .playControls.m-visible .playControls__inner {
         transform: translateY(0);
@@ -310,6 +358,7 @@ a:hover {
 
 /* Header */
 .header {
+    animation: 1s ease-out 0s 1 slideInFromTop;
     width: auto;
     height: 46px;
     -webkit-transform: translateZ(0);
@@ -409,6 +458,61 @@ a:hover {
 
 .g-dark input[type="search"]:focus {
     background: #3c3c3c;
+}
+
+/* queue */
+.playControls.m-queueVisible.m-visible .playControls__queue {
+    pointer-events: auto;
+    transform: translateY(0);
+    opacity: 1;
+    transition-duration: .35s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1.2);
+}
+
+.sc-classic .queue {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+    background-color: #09090b;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .25);
+    border: 1px solid hsl(var(--border));
+    border-radius: 12px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.sc-classic .queue__itemWrapper {
+    background-color: #09090b;
+}
+
+.sc-classic .queueItemView.m-active,
+.sc-classic .queueItemView:hover {
+    background: #252525;
+}
+
+.sc-classic .queue__hide,
+.sc-classic .queue__hide:focus,
+.sc-classic .queue__hide:hover {
+    height: 46px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTkgNi40MUwxNy41OSA1IDEyIDEwLjU5IDYuNDEgNSA1IDYuNDEgMTAuNTkgMTIgNSAxNy41OSA2LjQxIDE5IDEyIDEzLjQxIDE3LjU5IDE5IDE5IDE3LjU5IDEzLjQxIDEyeiIvPgogICAgPC9nPgo8L3N2Zz4K);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    filter: invert()
+}
+
+.sc-classic .queue__title {
+    line-height: 46px;
+    color: white;
+}
+
+.sc-classic .queue__panel {
+    padding: 9px 24px;
+    border-bottom: 1px solid hsl(var(--border));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.sc-classic .queueFallback__stationMode {
+    padding: 0 24px;
+    border-top: 1px solid hsl(var(--border));
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 /* Comments */
