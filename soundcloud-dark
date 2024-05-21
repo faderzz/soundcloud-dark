@@ -1,0 +1,754 @@
+/* @author https://github.com/faderzz/soundcloud-dark */
+/* @github https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+
+a {
+    color: white;
+}
+
+
+input {
+    color: white;
+    outline: 0;
+    border: 0;
+    padding: 5px 7px;
+    background: #222;
+}
+
+input:focus {
+    background: #3c3c3c;
+    transition: background .2s ease-in-out;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    /* 	color: inherit; */
+    margin: 0;
+    padding: 0;
+}
+
+body.sc-classic {
+    background: #141417;
+    border-color: hsl(var(--border));
+}
+
+* {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.9% 83.9%;
+}
+
+body {
+    color: hsl(var(--border));
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --ring: 240 4.9% 83.9%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: hsl(var(--foreground));
+}
+
+p {
+    color: #707077;
+}
+a.sc-link-dark {
+    color: hsl(var(--foreground));
+}
+
+a.sc-link-dark,
+a:hover {
+    color: hsl(var(--foreground));
+    transition: color 0.1s ease;
+}
+
+/* hero */
+.sc-classic .fullHero {
+    height: 380px;
+    background: #e5e5e5;
+    margin-top: 20px;
+    border-color: hsl(var(--border));
+    border: 2px solid hsl(var(--border));
+    border-radius: 20px;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/*  */
+/* comment popover */
+.sc-classic .commentPopover__wrapper {
+    transition: transform 50ms;
+    font-size: 12px;
+}
+
+/*  */
+.tileGallery {
+    border-color: hsl(var(--border));
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.sc-border-light-right {
+    border-right: 1px solid hsl(var(--border));
+}
+
+.sc-classic .compactTrackListItem__number,
+.sc-classic .compactTrackListItem__trackTitle {
+    color: hsl(var(--foreground));
+}
+
+.sc-border-light-bottom {
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.sc-classic .mixedSelectionModule {
+    background-color: #09090b;
+    border-radius: 12px;
+    border: 1px solid hsl(var(--border));
+    padding: 1rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.sidebarModule {
+    background-color: #09090b;
+    border-radius: 12px;
+    border: 1px solid hsl(var(--border));
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.sidebarHeader {
+    padding-bottom: 10px;
+}
+
+.sc-classic .l-fluid-fixed .l-sidebar-right {
+    top: 30px;
+    width: 300px;
+}
+
+.l-fluid-fixed .l-sidebar-right {
+    position: absolute;
+    top: 24px;
+    top: var(--spacing-3x);
+    bottom: 0;
+    right: 0;
+}
+
+/* player */
+.playControls {
+    bottom: 10px;
+    padding: 0;
+}
+
+.sc-classic .playControls__bg,
+.sc-classic .playControls__inner {
+    background-color: #09090b;
+    border: 1px solid hsl(var(--border));
+    /*     border: 1px solid #73efff; */
+    border-radius: 13px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* .sc-classic .playControls__bg, .sc-classic .playControls__inner:hover {
+    box-shadow:0px 0px 7px #73efff;
+} */
+.sc-classic .l-container.l-fullwidth {
+    width: auto;
+    /* padding: 0; */
+}
+
+.playControls.m-visible .playControls__inner {
+    transform: translateY(0);
+    margin-right: 35vh;
+    margin-left: 35vh;
+}
+
+/* .sc-classic .playControl.playing {
+    box-shadow: 0px 0px 0px 0px transparent;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.sc-classic .playControl.playing:hover {
+    text-shadow:0px 0px 7px white;
+}
+ */
+@media only screen and (max-width: 1400px) {
+    .playControls.m-visible .playControls__inner {
+        transform: translateY(0);
+        margin-right: 15vh;
+        margin-left: 15vh;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .playControls.m-visible .playControls__inner {
+        transform: translateY(0);
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+.sc-classic .volume__sliderWrapper {
+    left: -5px;
+    width: 30px;
+    bottom: 40px;
+    background-color: #09090b;
+    border-radius: 13px;
+    border: 1px solid hsl(var(--border));
+}
+
+.sc-classic .compactTrackListItem.clickToPlay.active,
+.sc-classic .compactTrackListItem.clickToPlay:focus,
+.sc-classic .compactTrackListItem.clickToPlay:hover {
+    background-color: #09090b;
+    color: white;
+    transition: color 0.2s ease;
+}
+
+.sc-classic .compactTrackListItem.clickToPlay.active .compactTrackListItem__additional,
+.sc-classic .compactTrackListItem.clickToPlay:focus .compactTrackListItem__additional,
+.sc-classic .compactTrackListItem.clickToPlay:hover .compactTrackListItem__additional {
+    /* background: #f2f2f2; */
+    background: linear-gradient(90deg, hsl(var(--background)), #09090b 17px);
+}
+
+.sc-classic .commentForm.visible .commentForm__wrapper {
+    height: 64px;
+    display: flex;
+    background: #09090b;
+    border-color: hsl(var(--border));
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.soundActions {
+    outline: none;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.sc-button-small.sc-button-icon:not(.sc-button-stretch-icon),
+.sc-button-small.sc-button-responsive:not(.sc-button-stretch-icon) {
+    min-width: 25px;
+    padding-right: 5px;
+    color: #999;
+    border: none;
+    background-color: #000;
+}
+
+.sc-button-small.sc-button-icon:not(.sc-button-stretch-icon),
+.sc-button-small.sc-button-responsive:not(.sc-button-stretch-icon):hover {
+    color: white;
+    transition: color 0.2s ease;
+}
+
+.sc-classic .sound__soundActions {
+    background-color: transparent;
+}
+
+.sc-classic .compactTrackList__moreLink {
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.sc-classic .compactTrackList__moreLink:focus,
+.sc-classic .compactTrackList__moreLink:hover {
+    transition: color 0.2s ease;
+    color: white;
+    background-color: #222227;
+}
+
+/* Header */
+.header {
+    width: auto;
+    height: 46px;
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+    /* background: #fff; */
+    background: var(--background-surface-color);
+    transition: height .2s ease-in-out;
+}
+
+.sc-classic .header {
+    background: #000;
+    font-family: Inter, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.5;
+    position: absolute;
+    margin-right: 35vh;
+    margin-left: 35vh;
+    margin-top: 5px;
+    padding: 5px;
+    border-color: hsl(var(--border));
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1700px) {
+    .sc-classic .header {
+        background: #000;
+        font-family: Inter, sans-serif;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 1.5;
+        position: absolute;
+        margin-right: 15vh;
+        margin-left: 15vh;
+        margin-top: 5px;
+        padding: 5px;
+        border-color: hsl(var(--border));
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .sc-classic .header {
+        background: #000;
+        font-family: Inter, sans-serif;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 1.5;
+        position: absolute;
+        margin-right: 10vh;
+        margin-left: 10vh;
+        margin-top: 5px;
+        padding: 5px;
+        border-color: hsl(var(--border));
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .sc-classic .header {
+        background: #000;
+        font-family: Inter, sans-serif;
+        font-weight: 100;
+        font-size: 14px;
+        line-height: 1.5;
+        position: absolute;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 0px;
+        width: 100%;
+        padding: 5px;
+        border-color: hsl(var(--border));
+        border-radius: 0px;
+    }
+}
+
+/* flex h-10 border border-input px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px] */
+.headerSearch__input {
+    border-radius: 4px;
+    border: 1px solid hsl(var(--border));
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    background: #09090b;
+}
+
+.g-dark input[type="password"],
+.g-dark input[type="search"],
+.g-dark input[type="text"],
+.g-dark select,
+.g-dark textarea {
+    color: #666;
+    outline: 0;
+    border: 0;
+    padding: 5px 7px;
+    background: #222;
+}
+
+.g-dark input[type="search"]:focus {
+    background: #3c3c3c;
+}
+
+/* Comments */
+.sc-classic .listenEngagement {
+    border: 1px solid transparent;
+    box-shadow: 0 0px 0 0 trasn;
+    padding: 19px 0 4px;
+    margin-bottom: 1px;
+}
+
+.commentItem__creatorLink,
+.commentItem__creatorLink:hover,
+.commentItem__creatorLink:visited,
+.commentItem__username,
+.commentItem__usernameLink,
+.commentItem__usernameLink:hover,
+.commentItem__usernameLink:visited {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.commentItem__body > span > p {
+    margin-bottom: 4px;
+    color: white;
+}
+
+.commentItem__replyButton,
+.commentItem__replyButton:hover,
+.commentItem__replyButton:visited {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #919192;
+    margin-right: 12px;
+}
+
+.sc-button-dropdown.sc-button-active:not(.sc-button-dropdown-plain),
+.sc-button-dropdown:not(.sc-button-dropdown-plain) {
+    background-color: #000000;
+    border-color: #f50;
+    color: white
+}
+.sc-button-dropdown.sc-button-active:not(.sc-button-dropdown-plain),
+.sc-button-dropdown:hover:not(.sc-button-dropdown-plain) {
+    border-color: #f50;
+    color: #fff;
+    transition: color .2s ease-in-out;
+}
+
+.sc-classic .listenEngagement {
+    border: 0px solid #fff;
+    box-shadow: 0 0px 0 0 #f2f2f2;
+    padding: 19px 0 4px;
+    margin-bottom: 1px;
+}
+
+
+/* dropdown */
+.sc-classic .profileMenu .headerMenu__link {
+    position: relative;
+    padding-left: 33px;
+    color: #919192;
+}
+
+.sc-classic .headerMenu.m-light {
+    color: white;
+    background-color: #000;
+    border: 0px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0px 0 0 #f2f2f2;
+}
+
+.sc-classic .m-light .headerMenu__link:focus,
+.sc-classic .m-light .headerMenu__link:hover {
+    background-color: #f2f2f2;
+    transition: background-color .05s ease-in-out;
+}
+
+.sc-classic .m-light .headerMenu__link,
+.sc-classic .m-light .headerMenu__link:focus,
+.sc-classic .m-light .headerMenu__link {
+    color: #fff;
+}
+
+.sc-classic .m-light .headerMenu__link:hover {
+    color: #333;
+    transition: background-color .05s ease-in-out;
+}
+
+.sc-classic .m-light .headerMenu__list {
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+/* search page */
+.sc-classic .searchTitle {
+    background-color: transparent;
+    padding-top: 29px;
+    width: 1180px;
+    padding-right: 10px;
+}
+
+/* notifications */
+.sc-classic .dropdownContent__container {
+    background-color: #000;
+    border: 1px solid hsl(var(--border));
+    border-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+a.sc-link-dark:hover,
+a.sc-link-medium:hover {
+    color: #fff;
+}
+
+.sc-classic .dropdownContent__listItem {
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.sc-classic .dropdownContent__header {
+    padding: 8px 16px;
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+.sc-classic .dropdownContent__main {
+    border-bottom: 1px solid hsl(var(--border));
+}
+
+/* forms */
+.sc-classic .audibleEditForm__form {
+    background-color: #000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 14px 25px 0;
+    position: relative;
+    z-index: 2;
+}
+
+.sc-classic .tabs__headingContainer,
+.sc-classic .tabs__tabs {
+    background: #000;
+    padding: 16px 25px 0;
+}
+
+.sc-classic .tokenInput__wrapper {
+    border: 1px solid hsl(var(--border));
+}
+
+.sc-classic .tagInput__wrapper {
+    background-color: #000;
+}
+
+.sc-classic .tokenInput__input {
+    padding: 1px 2px;
+    font-weight: 100;
+    background: black;
+}
+
+.sc-classic .textfield.datefield .textfield__input {
+    background: url(https://a-v2.sndcdn.com/assets/images/calendar-96bbd47c.svg) no-repeat right 8px center;
+    border: 1px solid hsl(var(--border));
+}
+
+.sc-classic .select__labelText {
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.sc-button-dropdown.sc-button-dropdown-plain:not(.sc-button-disabled):not(:disabled) {
+    border: 1px solid hsl(var(--border));
+    /* color: #333; */
+}
+
+
+
+.sc-classic .textfield__label {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.sc-classic .tokenInput__label {
+    margin-bottom: 8px;
+    color: white;
+}
+
+.sc-classic .baseFields__description .textfield__input {
+    height: 130px;
+    background: black;
+    border: 1px solid hsl(var(--border));
+}
+
+/* filter */
+.sc-classic .linkMenu {
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .2);
+    background-color: #000;
+}
+.sc-classic .g-nav-item > .g-nav-link {
+    /* color: #000; */
+    /* color: var(--font-primary-color); */
+    display: block;
+    padding-left: 33px;
+    background-position: 5px 3px;
+    background-repeat: no-repeat;
+    color: #888;
+}
+
+.sc-classic .g-nav-item > .g-nav-link:hover {
+    /* color: #000; */
+    /* color: var(--font-primary-color); */
+    color: white;
+}
+
+/* library */
+.sc-classic .g-tabs {
+    color: white;
+    border-bottom: 1px solid hsl(var(--border));
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    font-family: Inter, sans-serif;
+}
+
+.g-tabs-link {
+    color: white;
+}
+
+.sc-classic .g-tabs-link,
+.sc-classic .g-tabs-link:visited {
+    border-bottom: 2px solid transparent;
+    color: white;
+}
+
+/* dropbar */
+.sc-classic .dropbar__content {
+    background: #000;
+    font-family: Inter, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-right: 35vh;
+    margin-left: 35vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-color: hsl(var(--border));
+    border-radius: 10px;
+}
+
+.sc-classic .userDropbar {
+    padding: 22px 0 22px 0;
+}
+
+/* misc fixes */
+.sc-border-light {
+    /* border: 1px solid #f2f2f2; */
+    border: 1px solid hsl(var(--border));
+}
+
+.sc-classic .showSpotlightUpsellBanner.spotlightUpsellBanner {
+    /* 	border: 2px dashed #d6d6d6; */
+    border: 3px dashed hsl(var(--border));
+    width: 100%;
+    color: #fff;
+}
+
+.sc-classic .profileUploadFooter {
+    position: relative;
+    margin: 10px 0 0;
+    background-color: #09090b;
+    border: 1px solid hsl(var(--border));
+    border-radius: 13px;
+    padding-bottom: 45px;
+}
+
+/* borders */
+.sc-classic .l-listen-wrapper .l-about-rows {
+    padding-right: 30px;
+    border-right: 1px solid hsl(var(--border));
+}
+
+.sc-border-light-top {
+    border-top: 1px solid hsl(var(--border));
+}
+
+/* icons */
+.uiEvoButton--isLight.commentItem__likeButton {
+    background-color: transparent;
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+.uiEvoButton--isLight,
+.uiEvoButton:hover.uiEvoButton--isLight,
+.uiEvoButton:link.uiEvoButton--isLight,
+.uiEvoButton:visited.uiEvoButton--isLight {
+    /* background: #f3f3f3; */
+    color: white;
+}
+
+.commentItem__like .uiEvoButton--isLight.commentItem__likeButton:hover {
+    background-color: transparent;
+}
+
+.uiEvoButton--isLight,
+.uiEvoButton:hover.uiEvoButton--isLight,
+.uiEvoButton:link.uiEvoButton--isLight,
+.uiEvoButton:visited.uiEvoButton--isLight:hover {
+    /* background: #f3f3f3; */
+    color: #f3f3f3;
+}
+
+.sc-classic .soundBadge__additional {
+    background: transparent;
+    top: 25px;
+    right: 0;
+    padding: 0 10px 0 20px;
+}
+
+/* disabled button */
+.sc-button-disabled,
+.sc-button-disabled:focus,
+.sc-button-disabled:hover,
+.sc-button.sc-pending,
+.sc-button.sc-pending:focus,
+.sc-button.sc-pending:hover,
+.sc-button:disabled,
+.sc-button:disabled:hover {
+    min-width: 25px;
+    padding-right: 5px;
+    color: #fff;
+    border: none;
+    background-color: #000;
+    ;
+    border-radius: 5px;
+}
+
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
+/* https://github.com/faderzz/soundcloud-dark */
