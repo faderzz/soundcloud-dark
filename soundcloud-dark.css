@@ -145,6 +145,16 @@ a:hover {
     font-size: 12px;
 }
 
+.sc-classic .commentPopover__wrapper a {
+    padding-right: 5px;
+    text-shadow: 0px 0px 4px #000
+}
+
+.sc-classic .commentPopover__wrapper p {
+    padding-right: 5px;
+    text-shadow: 0px 0px 4px #000
+}
+
 /*  */
 .tileGallery {
     border-color: hsl(var(--border));
@@ -849,6 +859,22 @@ a.sc-link-medium:hover {
     background-color: #000;
     ;
     border-radius: 5px;
+}
+
+/* Playlists */
+.sc-classic .tabs__headingContainer, .sc-classic .tabs__tabs {
+  background: #000;
+  padding: 16px 25px 0;
+}
+
+.modal__content {
+  position: relative;
+  height: 100%;
+  color: white;
+}
+
+.sc-classic .createPlaylistSuggestion__addContainer {
+  background: linear-gradient(90deg,hsla(0, 0%, 0%, 0.1),#000 20px);
 }
 
 /* https://github.com/faderzz/soundcloud-dark */
